@@ -1,0 +1,8 @@
+[init]
+	defaultBranch = main
+[diff]
+	tool = vimdiff
+[format]
+	pretty = oneline
+[log]
+	abbrevCommit = true
