@@ -4,6 +4,11 @@ set wildmenu
 " Windows
 set splitbelow splitright
 
+" Tabs are 4 spaces
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 " General langauge
 syntax on
 
