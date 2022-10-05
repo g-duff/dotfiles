@@ -1,5 +1,6 @@
 set number
 set wildmenu
+set cursorline
 
 " Windows
 set splitbelow splitright
