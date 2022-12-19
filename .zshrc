@@ -1,3 +1,3 @@
 export CLICOLOR=1
-bindkey -v
+[[ -v NVIM ]] || bindkey -v
 
