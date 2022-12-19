@@ -9,4 +9,14 @@ return require('packer').startup(function(use)
 
   -- Git
   use 'tpope/vim-fugitive'
+
+  -- Colorscheme
+  use({
+	  'rose-pine/neovim',
+	  as = 'rose-pine',
+	  config = function()
+		  vim.cmd('colorscheme rose-pine')
+	  end
+  })
+
 end)
