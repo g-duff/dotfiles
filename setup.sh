@@ -16,6 +16,12 @@ setup_bash() {
     echo ". ${CONFIG_FILES_DIRECTORY}/.bashrc" >> ${config_location}
 }
 
+setup_neovim() {
+    ln -s $PWD/nvim ~/.config/nvim
+}
+
 [[ -f ~/.zshrc ]] && setup_zsh
 
 [[ -f ~/.bashrc ]] && setup_bash
+
+[[ -d ~/.config ]] && setup_neovim
