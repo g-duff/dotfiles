@@ -1,9 +1,11 @@
-[init]
-	defaultBranch = main
+[core]
+	editor = nvim
 [diff]
 	tool = vimdiff
 [format]
 	pretty = oneline
+[init]
+	defaultBranch = main
 [log]
 	abbrevCommit = true
 [pull]
