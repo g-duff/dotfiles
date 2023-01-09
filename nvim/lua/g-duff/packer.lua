@@ -7,6 +7,9 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- Git
+  use 'tpope/vim-fugitive'
+
   -- Colorscheme
   use({
 	  'rose-pine/neovim',
