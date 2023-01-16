@@ -9,6 +9,10 @@ return require('packer').startup(function(use)
 
   -- Git
   use 'tpope/vim-fugitive'
+  
+  -- Comments
+  use 'tpope/vim-commentary'
+
 
   -- Colorscheme
   use({
