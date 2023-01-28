@@ -23,6 +23,9 @@ return require('packer').startup(function(use)
 	-- Git
 	use 'tpope/vim-fugitive'
 
+	-- LSP config
+	use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+
 	-- Status line
 	use {
 		'nvim-lualine/lualine.nvim',
