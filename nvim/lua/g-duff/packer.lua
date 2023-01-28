@@ -7,21 +7,26 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
-	-- Git
-	use 'tpope/vim-fugitive'
+	-- Colorscheme
+	use { 'catppuccin/nvim', as = 'catppuccin' }
 
 	-- Comments
 	use 'tpope/vim-commentary'
-
-
-	-- Colorscheme
-	use { 'catppuccin/nvim', as = 'catppuccin' }
 
 	-- Fuzzy finding
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
+	}
+
+	-- Git
+	use 'tpope/vim-fugitive'
+
+	-- Status line
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
 
 	-- Syntax tree
@@ -31,11 +36,5 @@ return require('packer').startup(function(use)
 			local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
 			ts_update()
 		end,
-	}
-
-	-- Status line
-	use {
-		'nvim-lualine/lualine.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
 end)
