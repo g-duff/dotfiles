@@ -17,9 +17,15 @@ require("lazy").setup({
 	"neovim/nvim-lspconfig",
 	"tpope/vim-commentary",
 	"tpope/vim-fugitive",
+	{ "catppuccin/nvim", name = "catppuccin" },
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "kyazdani42/nvim-web-devicons", lazy = true }
+	},
+	{
+		"nvim-telescope/telescope.nvim", 
+		version = "0.1.0",
+		dependencies = {"nvim-lua/plenary.nvim"}
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -27,12 +33,6 @@ require("lazy").setup({
 			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
 			ts_update()
 		end,
-	},
-	{ "catppuccin/nvim", name = "catppuccin" },
-	{
-		"nvim-telescope/telescope.nvim", 
-		version = "0.1.0",
-		dependencies = {"nvim-lua/plenary.nvim"}
 	},
 })
 
