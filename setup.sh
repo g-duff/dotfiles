@@ -18,7 +18,7 @@ setup_bash() {
 }
 
 setup_neovim() {
-    ln -s $PWD/nvim ~/.config/nvim
+    ln -s $PWD/nvim ~/.config/
 }
 
 setup_zsh
