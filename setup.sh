@@ -14,7 +14,6 @@ setup_bash() {
     config_location=~/.bashrc
     echo "# ${CONFIG_MESSAGE}" >> ${config_location}
     echo ". ${CONFIG_FILES_DIRECTORY}/aliases.sh" >> ${config_location}
-    echo ". ${CONFIG_FILES_DIRECTORY}/.bashrc" >> ${config_location}
 }
 
 setup_neovim() {
