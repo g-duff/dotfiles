@@ -17,6 +17,7 @@ require("lazy").setup({
 	"neovim/nvim-lspconfig",
 	"tpope/vim-commentary",
 	"tpope/vim-fugitive",
+	"tpope/vim-surround",
 	{ "catppuccin/nvim", name = "catppuccin" },
 	{
 		"nvim-lualine/lualine.nvim",
