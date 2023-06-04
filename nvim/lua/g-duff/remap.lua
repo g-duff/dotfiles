@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>fv", vim.cmd.Ex) -- files/folders view
+vim.keymap.set("n", "<leader>le", vim.cmd.Ex) -- look explorer
 
 -- Yank into system clipboard
 vim.keymap.set({'n', 'v'}, '<leader>y', '"+y') -- yank motion
