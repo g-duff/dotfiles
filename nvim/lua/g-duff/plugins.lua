@@ -21,7 +21,7 @@ require("lazy").setup({
 	{ "catppuccin/nvim", name = "catppuccin" },
 	{
 		"nvim-lualine/lualine.nvim",
-		dependencies = { "kyazdani42/nvim-web-devicons", lazy = true }
+		dependencies = { "nvim-tree/nvim-web-devicons", lazy = true }
 	},
 	{
 		"nvim-telescope/telescope.nvim", 
