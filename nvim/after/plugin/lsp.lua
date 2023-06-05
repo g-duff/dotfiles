@@ -39,17 +39,19 @@ local lsp_flags = {
 	debounce_text_changes = 150,
 }
 
-require('lspconfig')['pyright'].setup{
+lspconfig = require('lspconfig')
+
+lspconfig['pyright'].setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
 }
 
-require('lspconfig')['tsserver'].setup{
+lspconfig['tsserver'].setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
 }
 
-require('lspconfig')['rust_analyzer'].setup{
+lspconfig['rust_analyzer'].setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
 	settings = {
@@ -57,4 +59,4 @@ require('lspconfig')['rust_analyzer'].setup{
 	}
 }
 
-require('lspconfig').terraformls.setup{}
+lspconfig['terraformls'].setup{}
