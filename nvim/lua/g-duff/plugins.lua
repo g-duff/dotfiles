@@ -41,14 +41,14 @@ require("lazy").setup({
 		-- Optional dependencies
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
---},
---{
---	dev = {
---		-- directory where you store your local plugin projects
---		path = "~/Documents/Projects",
---		---@type string[] plugins that match these patterns will use your local versions instead of being fetched from GitHub
---		patterns = {"g-duff"}, -- For example {"folke"}
---		fallback = false, -- Fallback to git when local plugin doesn't exist
---	},
+},
+{
+	dev = {
+		-- directory where you store your local plugin projects
+		path = "~/dev",
+		---@type string[] plugins that match these patterns will use your local versions instead of being fetched from GitHub
+		patterns = {"g-duff"}, -- For example {"folke"}
+		fallback = false, -- Fallback to git when local plugin doesn't exist
+	},
 })
 
