@@ -41,6 +41,9 @@ require("lazy").setup({
 		-- Optional dependencies
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
+	{
+		'g-duff/sf.nvim', dev = true
+	},
 },
 {
 	dev = {
