@@ -20,3 +20,7 @@ vim.keymap.set('n', '<leader>wj', '<C-w>j')
 vim.keymap.set('n', '<leader>wk', '<C-w>k')
 vim.keymap.set('n', '<leader>wl', '<C-w>l')
 
+-- Tab navigation
+vim.keymap.set('n', '<leader>th', vim.cmd.tabprev)
+vim.keymap.set('n', '<leader>tl', vim.cmd.tabnext)
+
