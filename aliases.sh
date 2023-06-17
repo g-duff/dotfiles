@@ -1,3 +1,6 @@
+# Notes:
+# Aim for key strikes with alternate hands on qwerty keyboard.
+
 # List
 alias la='ls -a'
 alias ll='ls -l'
