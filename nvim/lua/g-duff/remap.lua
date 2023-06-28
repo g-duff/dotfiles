@@ -29,3 +29,6 @@ vim.keymap.set('n', '<leader>w<Right>', '<C-w>l')
 vim.keymap.set('n', '<leader>th', vim.cmd.tabprev)
 vim.keymap.set('n', '<leader>tl', vim.cmd.tabnext)
 
+vim.keymap.set('n', '<leader>t<Left>', vim.cmd.tabprev)
+vim.keymap.set('n', '<leader>t<Right>', vim.cmd.tabnext)
+
