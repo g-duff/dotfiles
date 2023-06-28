@@ -20,6 +20,11 @@ vim.keymap.set('n', '<leader>wj', '<C-w>j')
 vim.keymap.set('n', '<leader>wk', '<C-w>k')
 vim.keymap.set('n', '<leader>wl', '<C-w>l')
 
+vim.keymap.set('n', '<leader>w<Left>', '<C-w>h')
+vim.keymap.set('n', '<leader>w<Down>', '<C-w>j')
+vim.keymap.set('n', '<leader>w<Up>', '<C-w>k')
+vim.keymap.set('n', '<leader>w<Right>', '<C-w>l')
+
 -- Tab navigation
 vim.keymap.set('n', '<leader>th', vim.cmd.tabprev)
 vim.keymap.set('n', '<leader>tl', vim.cmd.tabnext)
