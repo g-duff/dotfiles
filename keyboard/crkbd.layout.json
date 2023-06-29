@@ -26,7 +26,7 @@
       "KC_NO",
       "KC_NO",
       "KC_LGUI",
-      "FN_MO13",
+      "MO(2)",
       "KC_SPC",
       "KC_BSPC",
       "KC_P",
@@ -50,7 +50,7 @@
       "KC_NO",
       "KC_NO",
       "KC_RALT",
-      "FN_MO23",
+      "DF(1)",
       "KC_ENT"
     ],
     [
@@ -76,7 +76,7 @@
       "KC_NO",
       "KC_NO",
       "KC_LGUI",
-      "KC_TRNS",
+      "DF(0)",
       "KC_SPC",
       "KC_BSPC",
       "KC_0",
@@ -100,7 +100,7 @@
       "KC_NO",
       "KC_NO",
       "KC_RALT",
-      "KC_TRNS",
+      "DF(2)",
       "KC_ENT"
     ],
     [
@@ -126,7 +126,7 @@
       "KC_NO",
       "KC_NO",
       "KC_LGUI",
-      "KC_TRNS",
+      "DF(0)",
       "KC_SPC",
       "KC_BSPC",
       "S(KC_0)",
@@ -150,7 +150,7 @@
       "KC_NO",
       "KC_NO",
       "KC_RALT",
-      "KC_TRNS",
+      "DF(3)",
       "KC_ENT"
     ],
     [
@@ -176,7 +176,7 @@
       "KC_NO",
       "KC_NO",
       "KC_LGUI",
-      "KC_TRNS",
+      "DF(0)",
       "KC_SPC",
       "KC_NO",
       "KC_NO",
@@ -200,7 +200,7 @@
       "KC_NO",
       "KC_NO",
       "KC_RALT",
-      "KC_TRNS",
+      "KC_NO",
       "KC_ENT"
     ]
   ],
