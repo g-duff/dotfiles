@@ -22,6 +22,7 @@ alias gka='git commit --amend'
 alias gkan='git commit --amend --no-edit'
 alias gl='git log'
 alias gn='git branch'
+alias gnc="git branch | sed -n 's/\* //p'"
 alias gp='git add' # put
 
 alias ghs='git push'
