@@ -10,18 +10,10 @@ setup_zsh() {
     echo "source ${CONFIG_FILES_DIRECTORY}/.zshrc" >> ${config_location}
 }
 
-setup_bash() {
-    config_location=~/.bashrc
-    echo "# ${CONFIG_MESSAGE}" >> ${config_location}
-    echo ". ${CONFIG_FILES_DIRECTORY}/aliases.sh" >> ${config_location}
-}
-
 setup_neovim() {
     ln -s $PWD/nvim ~/.config/
 }
 
 setup_zsh
 
-setup_bash
-
-# [[ -d ~/.config ]] && setup_neovim
+[[ -d ~/.config ]] && setup_neovim
