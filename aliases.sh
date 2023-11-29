@@ -24,6 +24,7 @@ alias gl='git log'
 alias gn='git branch'
 alias gnc="git branch | sed -n 's/\* //p'"
 alias gp='git add' # put
+alias gr='git rev-parse --show-toplevel'
 
 alias ghs='git push'
 alias gll='git pull'
