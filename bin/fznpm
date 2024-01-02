@@ -1,0 +1,2 @@
+#!/bin/bash
+jq '.scripts | keys | .[]' ./package.json --raw-output | fzf | xargs npm run 
