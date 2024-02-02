@@ -10,3 +10,6 @@
 	abbrevCommit = true
 [pull]
 	ff = only
+
+[include]
+	path = ~/.work.gitconfig
