@@ -21,10 +21,10 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-source ~/dev/dotfiles/aliases.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/dev/dotfiles/.p10k.zsh ]] || source ~/dev/dotfiles/.p10k.zsh
 
+[[ -f ~/.aliases.sh ]] && source ~/.aliases.sh
 [[ -f ~/.work.sh ]] && source ~/.work.sh
