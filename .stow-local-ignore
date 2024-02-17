@@ -1,0 +1,8 @@
+# Ignore almost everything
+.git
+.gitignore
+.inputrc
+Brewfile
+README.md
+keyboard
+setup.sh
