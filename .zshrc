@@ -26,5 +26,5 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/dev/dotfiles/.p10k.zsh ]] || source ~/dev/dotfiles/.p10k.zsh
 
-[[ -f ~/.aliases.sh ]] && source ~/.aliases.sh
-[[ -f ~/.work.sh ]] && source ~/.work.sh
+[[ ! -f ~/.aliases.sh ]] || source ~/.aliases.sh
+[[ ! -f ~/.work.sh ]] || source ~/.work.sh
