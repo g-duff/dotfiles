@@ -13,3 +13,4 @@
 
 [include]
 	path = ~/.work.gitconfig
+	path = ~/.personal.gitconfig
