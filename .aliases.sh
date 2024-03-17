@@ -1,6 +1,13 @@
 # Notes:
 # Aim for key strikes with alternate hands on qwerty keyboard.
 
+function chtsh () {
+	lang=$1
+	shift
+	query=$@
+	curl https://cht.sh/$lang/${query// /+} | less --RAW-CONTROL-CHARS
+}
+
 # List
 alias la='ls -a'
 alias ll='ls -l'
