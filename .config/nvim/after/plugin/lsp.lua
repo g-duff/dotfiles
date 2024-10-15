@@ -56,9 +56,9 @@ lspconfig['rust_analyzer'].setup{
 	flags = lsp_flags,
 	settings = {
 		["rust-analyzer"] = {
-                	checkOnSave = {
-                    		command = "clippy",
-                	},
+			checkOnSave = {
+				command = "clippy",
+			},
 		}
 	}
 }
