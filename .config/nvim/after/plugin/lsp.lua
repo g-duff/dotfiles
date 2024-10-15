@@ -64,3 +64,18 @@ lspconfig['rust_analyzer'].setup{
 }
 
 lspconfig['terraformls'].setup{}
+
+vim.filetype.add({ extension = { ['cls'] = 'apex', }, })
+lspconfig['apex_ls'].setup{
+	-- https://developer.salesforce.com/docs/platform/sfvscode-extensions/guide/apex-language-server.html
+	-- openjdk@17.0.12
+	cmd = {
+		"java",
+		"-jar",
+		vim.fn.expand("$HOME/.local/share/apex-jorje-lsp.jar"),
+		"apex_language_server"
+	},
+	apex_enable_semantic_errors = false,
+	on_attach = on_attach,
+	filetypes = { "apex" }
+}
