@@ -63,7 +63,9 @@ lspconfig['rust_analyzer'].setup{
 	}
 }
 
-lspconfig['terraformls'].setup{}
+lspconfig['terraformls'].setup{
+	on_attach = on_attach,
+}
 
 vim.filetype.add({ extension = { ['cls'] = 'apex', }, })
 lspconfig['apex_ls'].setup{
