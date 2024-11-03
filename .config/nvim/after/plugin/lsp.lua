@@ -63,6 +63,16 @@ lspconfig['rust_analyzer'].setup{
 	}
 }
 
+lspconfig['gopls'].setup{
+	cmd = { vim.fn.expand("$GOBIN/gopls") },
+	analyses = {
+		unusedparams = true,
+	},
+	staticcheck = true,
+	gofumpt = true,
+	on_attach = on_attach,
+}
+
 lspconfig['terraformls'].setup{
 	on_attach = on_attach,
 }
@@ -72,7 +82,7 @@ lspconfig['apex_ls'].setup{
 	-- Doc: https://developer.salesforce.com/docs/platform/sfvscode-extensions/guide/apex-language-server.html
 	-- Download: https://github.com/forcedotcom/salesforcedx-vscode/blob/develop/packages/salesforcedx-vscode-apex/out/apex-jorje-lsp.jar
 	-- I use: openjdk@17.0.12
-	apex_jar_path = vim.fn.expand("$HOME/.local/share/apex-jorje-lsp.jar"),
+	apex_jar_path = vim.fn.expand("$HOME/.local/share/nvim/apex-jorje-lsp.jar"),
 	on_attach = on_attach,
 	filetypes = { "apex" }
 }
