@@ -24,7 +24,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f ~/dev/dotfiles/.p10k.zsh ]] || source ~/dev/dotfiles/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [[ ! -f ~/.aliases.sh ]] || source ~/.aliases.sh
 [[ ! -f ~/.work.sh ]] || source ~/.work.sh
