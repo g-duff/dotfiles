@@ -46,7 +46,7 @@ lspconfig['pyright'].setup{
 	flags = lsp_flags,
 }
 
-lspconfig['tsserver'].setup{
+lspconfig['ts_ls'].setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
 }
