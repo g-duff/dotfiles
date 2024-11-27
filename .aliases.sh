@@ -8,6 +8,11 @@ function chtsh () {
 	curl https://cht.sh/$lang/${query// /+} | less --RAW-CONTROL-CHARS
 }
 
+# Github open
+function gho() {
+	open $(git config --get remote.origin.url | sed -E 's/.*github.com[:/](.*).git/https:\/\/github.com\/\1/')
+}
+
 # List
 alias la='ls -a'
 alias ll='ls -l'
