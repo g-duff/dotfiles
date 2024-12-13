@@ -5,7 +5,7 @@ function chtsh () {
 	lang=$1
 	shift
 	query=$@
-	curl https://cht.sh/$lang/${query// /+} | less --RAW-CONTROL-CHARS
+	curl http://cht.sh/$lang/${query// /+} | less --RAW-CONTROL-CHARS
 }
 
 # Github open
