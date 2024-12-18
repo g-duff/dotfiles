@@ -8,9 +8,9 @@ function chtsh () {
 	curl http://cht.sh/$lang/${query// /+} | less --RAW-CONTROL-CHARS
 }
 
-# Github open
-function gho() {
-	open $(git config --get remote.origin.url | sed -E 's/.*github.com[:/](.*).git/https:\/\/github.com\/\1/')
+# Github
+function github_repo_url() {
+	git config --get remote.origin.url | sed -E 's/.*github.com[:/](.*).git/https:\/\/github.com\/\1/'
 }
 
 # List
@@ -41,3 +41,4 @@ alias gr='git rev-parse --show-toplevel'
 alias ghs='git push'
 alias gll='git pull'
 
+alias gho='open $(github_repo_url)'
