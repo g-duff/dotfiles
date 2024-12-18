@@ -8,10 +8,6 @@ function chtsh () {
 	curl http://cht.sh/$lang/${query// /+} | less --RAW-CONTROL-CHARS
 }
 
-# Github
-function github_repo_url() {
-	git config --get remote.origin.url | sed -E 's/.*github.com[:/](.*).git/https:\/\/github.com\/\1/'
-}
 
 # List
 alias la='ls -a'
@@ -19,9 +15,11 @@ alias ll='ls -l'
 alias lla='ls -la'
 alias llh='ls -lh'
 
+
 # Vim
 alias vim='nvim'
 alias nv='nvim'
+
 
 # Git
 alias g='git'
@@ -41,4 +39,11 @@ alias gr='git rev-parse --show-toplevel'
 alias ghs='git push'
 alias gll='git pull'
 
+
+# Github
+function github_repo_url() {
+	git config --get remote.origin.url | sed -E 's/.*github.com[:/](.*).git/https:\/\/github.com\/\1/'
+}
+
 alias gho='open $(github_repo_url)'
+
