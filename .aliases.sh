@@ -47,4 +47,5 @@ function github_repo_url() {
 
 alias gho='open $(github_repo_url)'
 alias ghod='open $(github_repo_url)/compare/$(gnc)'
+alias ghopr='open $(github_repo_url)/compare/$(gnc)\?expand=1'
 
