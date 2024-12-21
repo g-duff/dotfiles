@@ -35,6 +35,10 @@ require("lazy").setup({
 		end,
 	},
 	{
+		"scalameta/nvim-metals",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
+	{
 		'stevearc/oil.nvim',
 		opts = {},
 		-- Optional dependencies
