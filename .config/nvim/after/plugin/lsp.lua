@@ -76,3 +76,24 @@ lspconfig['gopls'].setup{
 lspconfig['terraformls'].setup{
 	on_attach = on_attach,
 }
+
+--
+-- Metals --
+--
+-- Go to definition doesn't seem to work
+local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "scala", "sbt", "java" },
+	callback = function()
+		local metals = require("metals")
+
+		metals_config = metals.bare_config()
+		metals_config.on_attach = on_attach
+
+		--use SBT over Bloop for faster compile times
+		metals_config.settings.defaultBspToBuildTool = true 
+
+		metals.initialize_or_attach(metals_config)
+	end,
+	group = nvim_metals_group,
+})
