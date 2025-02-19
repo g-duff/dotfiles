@@ -49,3 +49,7 @@ alias gho='open $(github_repo_url)'
 alias ghod='open $(github_repo_url)/compare/$(gnc)'
 alias ghopr='open $(github_repo_url)/compare/$(gnc)\?expand=1'
 
+# Jira
+function jira_ticket_code() {
+        git branch | sed -n 's/\* //p' | sed -E 's/([A-Z]+)-([[:digit:]])/\1-\2/'
+}
