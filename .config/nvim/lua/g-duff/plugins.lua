@@ -18,6 +18,11 @@ require("lazy").setup({
 	"tpope/vim-commentary",
 	"tpope/vim-fugitive",
 	"tpope/vim-surround",
+	{
+		'MeanderingProgrammer/render-markdown.nvim',
+		dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+		opts = {},
+	},
 	{ "catppuccin/nvim", name = "catppuccin" },
 	{
 		"nvim-lualine/lualine.nvim",
@@ -41,7 +46,6 @@ require("lazy").setup({
 	{
 		'stevearc/oil.nvim',
 		opts = {},
-		-- Optional dependencies
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
 },
@@ -54,4 +58,3 @@ require("lazy").setup({
 		fallback = false, -- Fallback to git when local plugin doesn't exist
 	},
 })
-
