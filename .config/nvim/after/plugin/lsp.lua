@@ -46,10 +46,16 @@ lspconfig['pyright'].setup{
 	flags = lsp_flags,
 }
 
-lspconfig['ts_ls'].setup{
+-- lspconfig['ts_ls'].setup{
+-- 	on_attach = on_attach,
+-- 	flags = lsp_flags,
+-- }
+
+vim.lsp.config('ts_ls', {
 	on_attach = on_attach,
 	flags = lsp_flags,
-}
+})
+vim.lsp.enable('ts_ls')
 
 lspconfig['rust_analyzer'].setup{
 	on_attach = on_attach,
