@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	"neovim/nvim-lspconfig",
+	"rhysd/vim-fixjson",
 	"tpope/vim-commentary",
 	"tpope/vim-fugitive",
 	"tpope/vim-surround",
