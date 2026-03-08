@@ -39,12 +39,10 @@ local lsp_flags = {
 	debounce_text_changes = 150,
 }
 
-lspconfig = require('lspconfig')
-
-lspconfig['pyright'].setup{
+vim.lsp.config('pyright', {
 	on_attach = on_attach,
 	flags = lsp_flags,
-}
+})
 
 -- lspconfig['ts_ls'].setup{
 -- 	on_attach = on_attach,
@@ -57,7 +55,7 @@ vim.lsp.config('ts_ls', {
 })
 vim.lsp.enable('ts_ls')
 
-lspconfig['rust_analyzer'].setup{
+vim.lsp.config('rust_analyzer', {
 	on_attach = on_attach,
 	flags = lsp_flags,
 	settings = {
@@ -67,9 +65,9 @@ lspconfig['rust_analyzer'].setup{
 			},
 		}
 	}
-}
+})
 
-lspconfig['gopls'].setup{
+vim.lsp.config('gopls', {
 	cmd = { vim.fn.expand("$GOBIN/gopls") },
 	analyses = {
 		unusedparams = true,
@@ -77,11 +75,11 @@ lspconfig['gopls'].setup{
 	staticcheck = true,
 	gofumpt = true,
 	on_attach = on_attach,
-}
+})
 
-lspconfig['terraformls'].setup{
+vim.lsp.config('terraformls', {
 	on_attach = on_attach,
-}
+})
 
 --
 -- Metals --
