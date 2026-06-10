@@ -21,6 +21,12 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+# Save history for quick search
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory
+
 # Bind Ctrl+P to cycle backward through history words. Unbind (annoying) default
 bindkey -r '\e/'
 bindkey "^p" _history-complete-older
