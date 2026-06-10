@@ -21,6 +21,12 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+# Bind Ctrl+P to cycle backward through history words. Unbind (annoying) default
+bindkey -r '\e/'
+bindkey "^p" _history-complete-older
+
+# Bind Ctrl+N to cycle forward through history words
+bindkey "^n" _history-complete-newer
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -d /usr/local/share/powerlevel10k ]] || source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
