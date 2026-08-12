@@ -60,12 +60,13 @@ vim.lsp.config('rust_analyzer', {
 	flags = lsp_flags,
 	settings = {
 		["rust-analyzer"] = {
-			checkOnSave = {
+			check = {
 				command = "clippy",
 			},
 		}
 	}
 })
+vim.lsp.enable('rust_analyzer')
 
 vim.lsp.config('gopls', {
 	cmd = { vim.fn.expand("$GOBIN/gopls") },
