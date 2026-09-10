@@ -40,3 +40,5 @@ bindkey "^n" _history-complete-newer
 
 [[ ! -f ~/.aliases.sh ]] || source ~/.aliases.sh
 [[ ! -f ~/.work.sh ]] || source ~/.work.sh
+
+eval "$(~/.local/bin/mise activate zsh)"
