@@ -1,0 +1,4 @@
+[tools]
+neovim = "latest"
+ripgrep = "latest"
+starship = "latest"
