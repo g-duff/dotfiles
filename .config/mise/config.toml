@@ -2,4 +2,4 @@
 neovim = "latest"
 ripgrep = "latest"
 starship = "latest"
-tmux = "latest"
+zellij = "latest"
