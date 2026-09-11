@@ -34,10 +34,6 @@ bindkey "^p" _history-complete-older
 # Bind Ctrl+N to cycle forward through history words
 bindkey "^n" _history-complete-newer
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -d /usr/local/share/powerlevel10k ]] || source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 [[ ! -f ~/.aliases.sh ]] || source ~/.aliases.sh
 [[ ! -f ~/.work.sh ]] || source ~/.work.sh
 
