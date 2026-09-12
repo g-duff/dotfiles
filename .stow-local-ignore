@@ -2,7 +2,7 @@
 .git
 .gitignore
 .inputrc
-Brewfile
 README.md
+docs
 keyboard
 setup.sh
