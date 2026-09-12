@@ -1,8 +1,6 @@
-# Ignore almost everything
 .git
 .gitignore
-.inputrc
 README.md
 docs
 keyboard
-setup.sh
+scripts

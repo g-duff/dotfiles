@@ -14,6 +14,6 @@ Install dependencies:
 * Clone dotfiles repo
 
 Apply config:
-* Fonts (`fonts.sh`)
-* stow (`setup.sh`)
+* Fonts (`scripts/fonts.sh`)
+* stow (`scripts/setup.sh`)
 * `mise install`
