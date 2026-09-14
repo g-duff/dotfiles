@@ -11,8 +11,7 @@
 [pull]
 	ff = only
 
-[include]
-	path = ~/.work.gitconfig
-	path = ~/.personal.gitconfig
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[include]
+	path = ~/.local.gitconfig
