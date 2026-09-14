@@ -36,6 +36,7 @@ bindkey "^n" _history-complete-newer
 
 [[ ! -f ~/.aliases.sh ]] || source ~/.aliases.sh
 [[ ! -f ~/.work.sh ]] || source ~/.work.sh
+[[ ! -f ~/.local.sh ]] || source ~/.local.sh
 
 eval "$(~/.local/bin/mise activate zsh)"
 eval "$(starship init zsh)"
