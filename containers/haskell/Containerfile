@@ -1,0 +1,24 @@
+FROM docker.io/library/haskell:9.14-slim-bookworm
+
+RUN apt-get update && apt-get install -y \
+    neovim \
+    git \
+    ripgrep \
+    fd-find \
+    build-essential \
+    curl \
+    unzip \
+    libnuma1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# ghcup, used only to fetch a prebuilt HLS binary matched to this image's
+# GHC version — avoids solving HLS's dependency tree via cabal, which lags
+# behind newly-released GHC versions on Hackage.
+ENV BOOTSTRAP_HASKELL_NONINTERACTIVE=1 \
+    BOOTSTRAP_HASKELL_MINIMAL=1
+RUN curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+ENV PATH="/root/.ghcup/bin:${PATH}"
+
+RUN ghcup install hls
+
+WORKDIR /workspace

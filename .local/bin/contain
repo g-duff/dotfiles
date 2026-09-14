@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Name is derived from how the script was invoked, so usage/errors stay
+# correct even if this file gets renamed or symlinked under another name.
+PROG="$(basename "$0")"
+
+if [ $# -lt 1 ]; then
+  echo "Usage: $PROG <language>" >&2
+  exit 1
+fi
+LANGUAGE="$1"
+
+# Resolve through the stow symlink to find the real repo location,
+# regardless of clone path or how stow folded ~/.local/bin
+SCRIPT_PATH="$(readlink -f "${BASH_SOURCE[0]}")"
+DOTFILES_DIR="$(dirname "$(dirname "$(dirname "$SCRIPT_PATH")")")"
+CONTAINERFILE_DIR="$DOTFILES_DIR/containers/$LANGUAGE"
+
+if [ ! -d "$CONTAINERFILE_DIR" ]; then
+  echo "Error: no container definition for '$LANGUAGE' at $CONTAINERFILE_DIR" >&2
+  echo "Available: $(ls "$DOTFILES_DIR/containers" 2>/dev/null | tr '\n' ' ')" >&2
+  exit 1
+fi
+
+IMAGE="${LANGUAGE}-dev:latest"
+
+podman build -t "$IMAGE" -f "$CONTAINERFILE_DIR/Containerfile" "$CONTAINERFILE_DIR"
+podman run -it --rm \
+  -v "$HOME/.config/nvim:/root/.config/nvim:ro" \
+  -v "$HOME/.local/share/nvim:/root/.local/share/nvim" \
+  -v "$(pwd):/workspace" \
+  -w /workspace \
+  --userns=keep-id \
+  "$IMAGE" bash
